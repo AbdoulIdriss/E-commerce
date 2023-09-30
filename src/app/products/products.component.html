@@ -1,0 +1,16 @@
+<div class="docs">
+    
+    <ul *ngFor="let item of data" class="list">
+
+        <li>{{item.title}}</li>
+        <li><img src="{{item.images[1]}}" alt="" srcset=""></li>
+        <li> {{item.price | currency}}</li>
+
+        <div class="buts">
+            <button>Add to card</button>
+            <button>View details</button>
+        </div>
+
+    </ul>
+    
+</div>

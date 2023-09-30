@@ -1,0 +1,25 @@
+nav {
+    width: 100%;
+    margin: 10px 0px 10px 0px ;
+    padding: 5px 0px 10px 0px;
+    .header {
+        ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .paf {
+                display: flex;
+                margin-right: 30px;
+                justify-content: space-between;
+                gap: 15px;
+                li {
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
