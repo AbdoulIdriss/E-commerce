@@ -7,10 +7,10 @@
         <li> {{item.price | currency}}</li>
 
         <div class="buts">
-            <button>Add to card</button>
-            <button>View details</button>
+            <button (click)="addToCart(item)" >Add to cart</button>
+            <button [routerLink]="['/prod-details', item.id]"> View details </button>
         </div>
-
+        
     </ul>
     
 </div>

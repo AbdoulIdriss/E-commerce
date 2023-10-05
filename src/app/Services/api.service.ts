@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 
 export class APIService {
   
+  items: Products[] = [];
+  
   constructor( private http : HttpClient) { }
   
   private url :string = 'https://dummyjson.com/products';
@@ -18,5 +20,14 @@ export class APIService {
     return this.http.get<Products[]>(this.url);
 
   } 
+
+  getOneData(id:number):Observable<Products[]> {
+
+    return this.http.get<Products[]>(this.url + '/' + id);
+  }
+
+  addToCart(product: Products) {
+    this.items.push(product);
+  }
 
 }

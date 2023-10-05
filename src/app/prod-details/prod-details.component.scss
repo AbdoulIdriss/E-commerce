@@ -1,0 +1,16 @@
+.overall {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    background-color: grey;
+
+    .left{
+
+        img{
+            height: 7rem;
+        }
+    }
+    .right {
+        margin-top: 3rem;
+    }
+}

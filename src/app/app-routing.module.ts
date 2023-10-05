@@ -5,14 +5,17 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { BodyComponent } from './body/body.component';
 import { ProdDetailsComponent } from './prod-details/prod-details.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
-  { path:'', redirectTo:'body', pathMatch:'full'},
+  { path:'', redirectTo:'app', pathMatch:'full'},
   { path: 'header', component: HeaderComponent },
   { path:'body', component: BodyComponent},
   { path: 'footer', component: FooterComponent},
   { path: 'products', component: ProductsComponent, title: 'Products'},
-  { path: 'prod-details', component: ProdDetailsComponent}
+  { path: 'prod-details', component: ProdDetailsComponent},
+  { path: 'prod-details/:id', component: ProdDetailsComponent},
+  { path: 'cart', component: CartComponent }
 ];
 
 @NgModule({

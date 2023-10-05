@@ -1,3 +1,19 @@
-<div class="">
-    
+
+<div class="overall" *ngIf="infos">
+
+    <div class="left">
+
+        {{infos.title}}
+        <img src={{infos.images[1]}} alt="" srcset=""> 
+        {{infos.price | currency}}
+
+    </div>
+
+    <div class="right">
+
+        {{infos.category}}
+        {{infos.description}}
+        {{infos.stock}}
+
+    </div>
 </div>
