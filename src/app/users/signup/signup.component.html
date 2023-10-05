@@ -1,0 +1,81 @@
+    <form [formGroup]="updatedForm"  (ngSubmit)="onSubmit()">
+
+        <h1>SignUp</h1>
+
+        <div ngClass="form-group">
+
+            <i class="fa-solid fa-user"></i>
+            <label for="">Username :</label>
+            <input type="text"  id="username" formControlName = 'username'>
+
+        </div>
+        
+        <div class="">
+
+            <div class="" *ngIf="updatedForm.controls['username'].errors?.['required']">
+                This field is required
+            </div> 
+
+            <div class="" *ngIf="updatedForm.controls['username'].errors?.['minlength']">
+                <!-- use updatedForm.controls to access the username in the ts -->
+                Please enter atleast 5 characters
+            </div>
+
+        </div>
+
+        <div ngClass="form-group">
+
+            <i ngClass="fa-solid fa-envelope"></i>
+            <label for="">Email :</label>
+            <input type="email"  id="email" placeholder="email" formControlName = 'email'> 
+
+        </div>
+        
+        <div class="">
+
+            <div class="" *ngIf="updatedForm.controls['email'].errors?.['email']">
+               Enter correct email format
+           </div>
+    
+           <div class="" *ngIf="updatedForm.controls['email'].errors?.['required']">
+               This field is required
+           </div>
+
+        </div>
+
+
+        <div ngClass="form-group">
+
+            <i ngClass="fa-solid fa-lock"></i>
+            <label for="">Password :</label>
+            <input type="password"  id="password" placeholder="password" formControlName = 'password'>
+          
+        </div>
+        
+        <div class="">
+
+            <div class="" *ngIf="updatedForm.controls['password'].errors?.['pattern']">
+                Enter correct password format
+            </div>
+    
+            <div class="" *ngIf="updatedForm.controls['password'].errors?.['required']">
+                This field is required
+            </div>
+    
+            <div class="" *ngIf="updatedForm.controls['password'].errors?.['minlength']">
+                Enter atleast 8 characters
+            </div>
+
+        </div>
+
+
+  
+        <div class ="">
+
+            <button type="submit" >Submit</button>
+
+        </div>
+
+        <span>Already have an account?<a id="log" href='../signin'>Login</a></span>
+
+    </form>

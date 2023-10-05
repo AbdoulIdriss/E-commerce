@@ -1,0 +1,40 @@
+<div ngClass="signin">
+
+    <form [formGroup]="updatedForm"  (ngSubmit)="onSubmit()" >
+
+        <h1>SignIn</h1>
+
+        <div ngClass="form-group">
+
+            <i ngClass="fa-solid fa-envelope"></i>
+            <label for="">Email : </label>
+            <input type="email"  id="email" placeholder="email" formControlName="email" >
+
+        </div>
+  
+        <div ngClass="form-group">
+
+            <i ngClass="fa-solid fa-lock"></i>
+            <label for="">Password : </label>
+            <input type="password"  id="password" placeholder="password" formControlName="password" >
+
+        </div>
+  
+        <div class ="">
+
+            <div class="F-password">
+                
+                <p> <a href="/forget-p">Forget Password?</a></p>
+
+            </div>
+
+            <button type="submit"> Submit </button>
+
+        </div>
+
+        <span>Create an Account 
+            <a id="sign" href="/signup">Signup</a>
+        </span>
+        
+    </form>
+</div>
