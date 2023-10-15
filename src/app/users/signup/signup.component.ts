@@ -22,7 +22,7 @@ export class SignupComponent {
   // will be accesbile accesible only in the form
 
   ngOnInit():void 
-  { //here we cretaed a method containing our forms and validations requirements
+  { //here i created a method containing our form and validations requirements
 
     this.updatedForm = this.formBuilder.group({
 
